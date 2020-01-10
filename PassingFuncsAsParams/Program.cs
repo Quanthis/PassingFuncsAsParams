@@ -16,11 +16,16 @@ namespace PassingFuncsAsParams
 
         private static BigInteger Silnia(int l)
         {
-            BigInteger w;
+            BigInteger w = 1;
 
             for (BigInteger i = 1; i <= l; i++)
             {
+                //WriteLine(l);
                 w *= i;
+                /*if (i % 100 == 0)
+                {
+                    WriteLine($"Current iteration:  {i}");
+                }*/
             }
             return w;
         }
@@ -38,7 +43,8 @@ namespace PassingFuncsAsParams
         static void Main(string[] args)
         {
             //DoingSomethingMore(DoSomething);
-            SilniaZWynikiem(Silnia, 10000);
+            SilniaZWynikiem(Silnia, 1000);
+            ReadKey();
         }
     }
 }
